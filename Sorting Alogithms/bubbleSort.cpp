@@ -3,16 +3,13 @@ using namespace std;
 
 void bubble_sort(int n, int *a)
  {
-    int temp = 0;
     for (int i = 0; i <= n - 2; i++)
         {
         for (int j = 0; j <= n - 2 - i; j++)
         {
             if (a[j + 1] < a[j])
             {
-                temp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = temp;
+                swap(a[j + 1], a[j]);
             }
         }
     }
